@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icon.png" type="image/png">
+
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Prayer Times">
+
+    <!-- Security and Permissions -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://api.aladhan.com; connect-src 'self' https://api.aladhan.com; media-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(self)">
+</head>
+
+<body>
+    <div class="prayer-times-container">
+        <h1>Today's Prayer Times</h1>
+        <!-- <button id="debug-button">Show Debug Logs</button> -->
+        <div class="current-datetime">
+            <p id="current-date"></p>
+            <p id="current-time"></p>
+        </div>
+        <div class="prayer-times">
+            <div class="prayer-time" id="fajr">
+                <h3>Fajr</h3>
+                <p class="time"></p>
+            </div>
+            <div class="prayer-time" id="dhuhr">
+                <h3>Dhuhr</h3>
+                <p class="time"></p>
+            </div>
+            <div class="prayer-time" id="asr">
+                <h3>Asr</h3>
+                <p class="time"></p>
+            </div>
+            <div class="prayer-time" id="maghrib">
+                <h3>Maghrib</h3>
+                <p class="time"></p>
+            </div>
+            <div class="prayer-time" id="isha">
+                <h3>Isha</h3>
+                <p class="time"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <p>Version <span id="app-version"></span></p>
+        <button id="initAudio" class="init-audio-btn">Initialize Audio</button>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
